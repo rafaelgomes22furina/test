@@ -1,0 +1,5 @@
+/* tema claro (Configurações > Tema) */
+body[data-theme=light]{color-scheme:light;--bg:#c9dcd8;--pn:#f4faf8;--cd:#f8fcfb;--bd:#adc5c0;--g:#0b7a80;--gd:#d3ecea;--og:#fff;--y:#ffc928;--yt:#231a00;--tx:#10242a;--mu:#455a5e;--am:#b45309;--rd:#dc2626}
+body[data-theme=dark]{color-scheme:dark;--bg:#0b0b0f;--pn:#111114;--cd:#16161a;--bd:#26262d;--g:#1de97a;--gd:#0f3d2a;--og:#04130b;--y:#ffc928;--yt:#231a00;--tx:#fff;--mu:#8e8e99;--am:#f59e0b;--rd:#ef4444}
+body[data-theme=light] .btn{color:#fff}
+body[data-theme=light] .btn.s{color:var(--tx)}

@@ -1,0 +1,57 @@
+/* ===== carrossel: fundos de ambiente + posições diferentes por produto (estilo Shopee / Mercado Livre) ===== */
+.car .cslide.cv{position:relative;isolation:isolate;background:#0b0b0f}
+body .car .cslide.cv{background:#0b0b0f}
+.cv .cbg{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.cv .cbg::before{content:"";position:absolute;inset:0;background:var(--bg) center/cover no-repeat;transform-origin:var(--ko,60% 50%);animation:kb 16s ease-in-out infinite alternate;filter:saturate(1.12) contrast(1.05)}
+.cv .cbg::after{content:"";position:absolute;inset:0;background:var(--scrim)}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.cv .ctx{position:relative;z-index:2;padding:18px 22px;border-radius:18px;background:linear-gradient(135deg,rgba(10,7,20,.72),rgba(10,7,20,.44));border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 44px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px)}
+.cv .cim{z-index:2}
+.car .cslide.cv{min-width:0}
+.cv .ctx{flex:1 1 0;max-width:400px;min-width:0;box-sizing:border-box}
+.car .cv .cnow{white-space:nowrap;font-size:clamp(28px,3.6vw,40px)}
+
+/* 0 · Serra — bancada de oficina: texto à esquerda, produto grande à direita */
+.cv0{--scrim:linear-gradient(90deg,rgba(14,8,4,.86) 0%,rgba(14,8,4,.55) 45%,rgba(14,8,4,.15) 100%),radial-gradient(circle at 78% 55%,rgba(255,170,60,.28),transparent 55%);--ko:72% 55%}
+/* 1 · Parafusadeira — gaveta de ferramentas: produto à ESQUERDA, texto à direita, amarelo industrial */
+.cv1{--scrim:linear-gradient(270deg,rgba(8,8,10,.88) 0%,rgba(8,8,10,.55) 48%,rgba(8,8,10,.12) 100%),radial-gradient(circle at 22% 55%,rgba(255,200,40,.30),transparent 52%);--ko:30% 55%}
+/* 2 · iPhone — aço escovado: produto no centro-direita, bem grande, selo redondo */
+.cv2{--scrim:linear-gradient(90deg,rgba(6,10,20,.88) 0%,rgba(6,10,20,.5) 52%,rgba(6,10,20,.1) 100%),radial-gradient(circle at 70% 50%,rgba(255,120,150,.32),transparent 50%);--ko:70% 50%}
+/* 3 · Escova — banheiro de mármore: produto à esquerda, texto à direita, tom rosa/roxo */
+.cv3{--scrim:linear-gradient(270deg,rgba(28,6,40,.9) 0%,rgba(28,6,40,.6) 50%,rgba(60,10,70,.12) 100%),radial-gradient(circle at 24% 50%,rgba(255,140,220,.34),transparent 52%);--ko:28% 50%}
+/* 4 · Grill — cozinha rústica: texto à esquerda, produto alto e inclinado à direita, selo redondo */
+.cv4{--scrim:linear-gradient(90deg,rgba(18,8,2,.9) 0%,rgba(18,8,2,.56) 50%,rgba(18,8,2,.14) 100%),radial-gradient(circle at 76% 55%,rgba(255,150,40,.32),transparent 52%);--ko:74% 55%}
+/* 5 · TV — sala em penumbra (CSS), produto à esquerda, etiqueta verde */
+.cv5 .cbg::before{background:radial-gradient(circle at 43% 22%,rgba(255,255,255,0.9) 0 1.5px,transparent 2.5px),radial-gradient(circle at 8% 12%,rgba(255,255,255,0.5) 0 2px,transparent 3px),radial-gradient(circle at 48% 77%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 29% 7%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 55% 11%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 72% 57%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 17% 31%,rgba(255,255,255,0.5) 0 2px,transparent 3px),radial-gradient(circle at 75% 77%,rgba(255,255,255,0.5) 0 1.5px,transparent 2.5px),radial-gradient(circle at 30% 8%,rgba(255,255,255,0.5) 0 2px,transparent 3px),radial-gradient(circle at 39% 56%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 17% 76%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 89% 26%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 75% 84%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 14% 73%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 9% 82%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 89% 71%,rgba(255,255,255,0.7) 0 1.5px,transparent 2.5px),radial-gradient(circle at 61% 77%,rgba(255,255,255,0.7) 0 1.5px,transparent 2.5px),radial-gradient(circle at 40% 34%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 33% 13%,rgba(255,255,255,0.7) 0 2px,transparent 3px),radial-gradient(circle at 69% 66%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 59% 39%,rgba(255,255,255,0.5) 0 2px,transparent 3px),radial-gradient(circle at 17% 68%,rgba(255,255,255,0.5) 0 1.5px,transparent 2.5px),radial-gradient(circle at 98% 46%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 55% 8%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 75% 43%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 46% 79%,rgba(255,255,255,0.9) 0 1.5px,transparent 2.5px),radial-gradient(circle at 60% 11%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 62% 92%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 95% 92%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 75% 90%,rgba(255,255,255,0.7) 0 1.5px,transparent 2.5px),radial-gradient(circle at 93% 52%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 61% 48%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 16% 66%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 38% 19%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 52% 66%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 59% 54%,rgba(255,255,255,0.7) 0 2px,transparent 3px),radial-gradient(circle at 19% 58%,rgba(255,255,255,0.7) 0 2px,transparent 3px),radial-gradient(circle at 92% 56%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 50% 32%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 24% 22%,rgba(255,255,255,0.9) 0 1px,transparent 2px),radial-gradient(circle at 31% 4%,rgba(255,255,255,0.9) 0 1.5px,transparent 2.5px),radial-gradient(circle at 25% 36%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 20% 56%,rgba(255,255,255,0.7) 0 2px,transparent 3px),radial-gradient(circle at 80% 75%,rgba(255,255,255,0.5) 0 1px,transparent 2px),radial-gradient(circle at 90% 68%,rgba(255,255,255,0.9) 0 2px,transparent 3px),radial-gradient(circle at 88% 97%,rgba(255,255,255,0.7) 0 1px,transparent 2px),radial-gradient(circle at 30% 120%,#7fb2ff 0 11%,#3b62d8 15%,#1b2c7a 24%,rgba(20,30,100,0) 38%),radial-gradient(ellipse at 78% 22%,rgba(170,80,255,.60),transparent 48%),radial-gradient(ellipse at 15% 30%,rgba(40,120,255,.45),transparent 46%),radial-gradient(ellipse at 60% 80%,rgba(255,90,170,.25),transparent 40%),linear-gradient(160deg,#03040e 0%,#0a1038 55%,#150a33 100%);filter:none;animation:kb 22s ease-in-out infinite alternate}
+.cv5{--scrim:linear-gradient(270deg,rgba(3,4,14,.84) 0%,rgba(3,4,14,.45) 50%,rgba(3,4,14,0) 100%)}
+.cv5 .cbg::after{background:var(--scrim)}
+.cv5 .cim img{max-width:100%}
+
+@media(min-width:821px){
+ .car .cslide.cv{padding:22px 56px;gap:20px}
+ .car .cslide.cv .cim{--w:min(380px,calc(100vw - 100px));margin-right:0}
+ .car .cslide.cv1,.car .cslide.cv3,.car .cslide.cv5{flex-direction:row-reverse}
+ .car .cslide.cv1 .cim,.car .cslide.cv3 .cim,.car .cslide.cv5 .cim{margin-right:0;margin-left:0}
+ .car .cslide.cv0 .cim{translate:6px 14px;scale:1.04}
+ .car .cslide.cv1 .cim{translate:-4px -6px;scale:1.06}
+ .car .cslide.cv2 .cim{translate:-34px -14px;scale:1.16}
+ .car .cslide.cv3 .cim{translate:10px 8px;scale:1.08}
+ .car .cslide.cv4 .cim{translate:-18px -20px;scale:1.14}
+ .car .cslide.cv5 .cim{translate:6px 4px;scale:1.2}
+}
+
+/* selo estilo Shopee: círculo vermelho tracejado (slides 2 e 4) */
+.car .cslide.cv2 .cim::before,.car .cslide.cv4 .cim::before{content:attr(data-off) "\A OFF";white-space:pre;text-align:center;display:grid;place-items:center;position:absolute;top:-8%;left:auto;right:0;width:24cqw;height:24cqw;border-radius:50%;font-size:6.6cqw;line-height:1.05;letter-spacing:-.02em;color:#fff;background:radial-gradient(circle at 30% 25%,#ff7a4a,#ee2c1a 70%);border:3px dashed rgba(255,255,255,.75);outline:3px solid #ee2c1a;text-shadow:none;box-shadow:0 10px 24px rgba(0,0,0,.55);transform:rotate(10deg);z-index:3}
+.car .cslide.cv2 .cim::after,.car .cslide.cv4 .cim::after,.car .cslide.cv3 .cim::after,.car .cslide.cv5 .cim::after{display:none}
+/* etiqueta estilo Mercado Livre: faixa verde "NN% OFF" (slides 3 e 5) */
+.car .cslide.cv3 .cim::before,.car .cslide.cv5 .cim::before{content:attr(data-off) " OFF";position:absolute;top:2%;left:auto;right:0;font-size:7.2cqw;line-height:1;letter-spacing:0;padding:.3em .65em;border-radius:8px;color:#fff;background:linear-gradient(135deg,#00c46a,#008f4c);text-shadow:none;box-shadow:0 8px 18px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.4);transform:rotate(-4deg);z-index:3}
+.car .cslide.cv3 .cim::before{right:auto;left:0}
+.car .cslide.cv5 .cim::before{right:auto;left:0}
+
+@media(max-width:820px){
+ .cv .ctx{padding:16px 16px 18px;width:100%;box-sizing:border-box}
+ .cv .cbg::after{background:linear-gradient(0deg,rgba(8,6,16,.55) 0%,rgba(8,6,16,.15) 60%)!important}
+ .car .cslide.cv2 .cim::before,.car .cslide.cv4 .cim::before{top:-4%;right:2%;width:25cqw;height:25cqw;font-size:7cqw}
+ .car .cslide.cv3 .cim::before,.car .cslide.cv5 .cim::before{top:0;font-size:8cqw}
+}
+@media (prefers-reduced-motion:reduce){.cv .cbg::before{animation:none}}

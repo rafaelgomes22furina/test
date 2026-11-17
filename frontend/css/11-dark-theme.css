@@ -1,0 +1,29 @@
+/* ===== Tema escuro (layout do arquivo escuro) ===== */
+body[data-theme=dark] .mn:not(.bn){background:linear-gradient(135deg,#0f3d2a,#0b1f17 60%,#3a2606 130%);border:1px solid #1a5a3d}
+body[data-theme=dark] .mn p,body[data-theme=dark] .lgl p,body[data-theme=dark] .lgi span{color:#a9c7b8}
+body[data-theme=dark] .sb button:hover{background:rgba(29,233,122,.12);color:var(--tx);box-shadow:0 6px 14px rgba(0,0,0,.28),inset 3px 0 0 var(--g)}
+body[data-theme=dark] .sb button.on:hover{background:var(--g);color:#04130b;box-shadow:0 6px 16px rgba(29,233,122,.35)}
+body[data-theme=dark] .pm.g{background:linear-gradient(135deg,#0f3d2a,#0b1f17);border-color:#1a5a3d}
+body[data-theme=dark] .lgl{background:linear-gradient(135deg,#0f3d2a,#0b1f17 60%,#3a2606 130%);border:1px solid #1a5a3d}
+body[data-theme=dark] .agfab{position:fixed;right:calc(16px + var(--agr,0px));bottom:calc(16px + var(--agb,0px));width:76px;height:76px;border:0;background:transparent;cursor:pointer;z-index:9998;padding:0;filter:drop-shadow(0 0 14px rgba(34,224,122,.55));transition:transform .2s}
+body[data-theme=dark] .agdot{position:absolute;right:8px;top:8px;width:12px;height:12px;border-radius:50%;background:#b6ff5a;box-shadow:0 0 10px #b6ff5a;animation:agp 1.6s infinite}
+body[data-theme=dark] .agtip{position:fixed;right:calc(96px + var(--agr,0px));bottom:calc(34px + var(--agb,0px));background:#07170e;color:#c4ffdf;border:1px solid #22e07a88;padding:8px 12px;border-radius:12px;font-size:13px;z-index:9998;box-shadow:0 0 16px #22e07a55}
+body[data-theme=dark] .agpan{position:fixed;right:calc(16px + var(--agr,0px));bottom:calc(100px + var(--agb,0px));width:372px;max-height:min(600px,calc(var(--agvh,100vh) - 130px));display:none;flex-direction:column;background:linear-gradient(180deg,#05140bf2,#010402f2);backdrop-filter:blur(10px);border:1px solid #22e07a88;border-radius:18px;box-shadow:0 0 28px #22e07a44,inset 0 0 40px #22e07a14;z-index:9999;color:#d9ffea;overflow:hidden;font-family:inherit}
+body[data-theme=dark] .agpan::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(34,224,122,.045) 3px 4px)}
+body[data-theme=dark] .agpan header{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid #22e07a44}
+body[data-theme=dark] .agpan header canvas{flex:none}
+body[data-theme=dark] .agpan header b{letter-spacing:4px;color:#7dffb8;font-size:16px}
+body[data-theme=dark] .agpan header small{display:block;color:#7fb899;font-size:11px}
+body[data-theme=dark] .agx{margin-left:auto;background:none;border:1px solid #22e07a55;color:#9dffc8;border-radius:8px;width:30px;height:30px;cursor:pointer;padding:0}
+body[data-theme=dark] .agb{padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.4;color:#d9ffea}
+body[data-theme=dark] .agm.a .agb{background:#0a1f14;border:1px solid #22e07a55}
+body[data-theme=dark] .agm.u .agb{background:linear-gradient(135deg,#17b862,#0a6b38);color:#fff}
+body[data-theme=dark] .aga button,body[data-theme=dark] .agchips button{background:#0c2618;color:#c4ffdf;border:1px solid #22e07a88;border-radius:999px;padding:6px 11px;font-size:12.5px;cursor:pointer}
+body[data-theme=dark] .aga button:hover,body[data-theme=dark] .agchips button:hover{background:#22e07a;color:#02140a;box-shadow:0 0 12px #22e07a}
+body[data-theme=dark] .agin{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #22e07a44;margin:0}
+body[data-theme=dark] .agin input{flex:1;background:#020805;border:1px solid #22e07a66;color:#e6fff0;border-radius:10px;padding:10px;font:inherit;font-size:14px;min-width:0;width:auto}
+body[data-theme=dark] .agin button{border:0;background:#22e07a;color:#02140a;border-radius:10px;width:42px;font-size:16px;cursor:pointer;padding:0}
+body[data-theme=dark] .agty i{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:#7dffb8;animation:agp 1s infinite}
+body[data-theme=dark] .agty i:nth-child(2){animation-delay:.15s}
+body[data-theme=dark] .agty i:nth-child(3){animation-delay:.3s}
+.thb{background:rgba(127,127,127,.18);border:1px solid rgba(127,127,127,.45);border-radius:999px;padding:6px 12px;font-size:13px;white-space:nowrap;color:inherit}.thb:hover{background:rgba(127,127,127,.3)}

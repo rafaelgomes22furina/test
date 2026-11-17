@@ -1,0 +1,27 @@
+
+const CAR_IMG=["assets/img/carousel/product-0.jpg", "assets/img/carousel/product-1.jpg", "assets/img/carousel/product-2.jpg", "assets/img/carousel/product-3.jpg", "assets/img/carousel/product-4.jpg", "assets/img/carousel/product-5.jpg"];
+const addP=(cat,nm,pr,od,img)=>{const k='n'+(nid++);B.push([k,nm,pr,od,Math.round((1-pr/od)*100)]);ALL.push(B[B.length-1]);CATM[k]=cat;IMG[k]=img;return k};
+const CS=[
+['Ferramentas','Serra Mármore DeWEN 1400W 12800RPM 125mm',189.51,296.11,'no Pix','25 itens vendidos'],
+['Ferramentas','Parafusadeira e Furadeira de Impacto 3/8 pol. The Black Tools',279.9,568.95,'6x R$ 46,65 sem juros','+500 vendidos'],
+['Celulares','Apple iPhone 13 (128GB) Branco Novo + Acessórios',2997,3299,'10x R$ 299,70 sem juros','Frete grátis'],
+['Beleza','Escova Rotativa Gama Italy 1100W Giratória + Cacheador',489.9,689.9,'9x R$ 54,43 sem juros','Frete grátis'],
+['Eletrodomésticos','Grill Elétrico com Tampa + Grelha Argentina Itanova Inox',4060,4999,'10x R$ 406,02 sem juros','Frete grátis'],
+['TV e Vídeo','Smart TV DLED 43 pol. FHD Multi Roku 3HDMI 2USB Wi-Fi',1266.43,1868.9,'Full · entrega rápida','Oferta relâmpago']
+].map((x,i)=>({k:addP(x[0],x[1],x[2],x[3],CAR_IMG[i]),t:x[1],p:x[2],o:x[3],inst:x[4],tr:x[5]}));
+const CARCUT=['assets/img/carousel/cutout-0.webp','assets/img/carousel/cutout-1.webp','assets/img/carousel/cutout-2.webp','assets/img/carousel/cutout-3.webp','assets/img/carousel/cutout-4.jpg','assets/img/carousel/cutout-5.webp'];
+const CAR={i:0,pause:0,h:0};
+const CARBG=["assets/img/carousel/bg-0.jpg","assets/img/carousel/bg-1.jpg","assets/img/carousel/bg-2.jpg","assets/img/carousel/bg-3.jpg","assets/img/carousel/bg-4.jpg",null];
+const carSlide=(c,i)=>{const pct=Math.round((1-c.p/c.o)*100);return `<div class="cslide cv cv${i}" role="group" aria-roledescription="slide" aria-label="${c.t}"><div class="cbg"${CARBG[i]?` style="--bg:url('${assetUrl(CARBG[i])}')"`:''}></div><div class="ctx"><span class="cbf">🔥 BLACK FRIDAY</span><h2>${c.t}</h2><div class="cpr"><span class="coff">-${pct}%</span><span class="cold">${f(c.o)}</span></div><div class="cnow">${f(c.p)}</div><div class="cin">${c.inst}</div><div class="cex"><span>${c.tr}</span><span>◷ Retire hoje na loja</span></div><button class="btn cta" onclick="PK='${c.k}';go('prod')">Aproveitar →</button></div><div class="cim${CARCUT[i]?'':' ph'}" data-off="${pct}%"><img src="${CARCUT[i]||IMG[c.k]}" alt="${c.t}"></div></div>`};
+const hs1=()=>`<div class="cslide hs1" role="group" aria-roledescription="slide" aria-label="Som que transforma"><div class="mn bn"><div class="bwrap" style="--b:url(${assetUrl(BAN)})"><img class="bimg" src="${BAN}" alt="Fone de ouvido sobre fundo amarelo"></div><div class="btx"><small>SOM QUE TRANSFORMA</small><h1>Seu ritmo, sem limites.</h1><p>Até 35% OFF em áudio premium. Compre agora e retire ainda hoje.</p><button class="btn" onclick="go('cart')">Quero aproveitar &rarr;</button></div></div></div>`;
+const bfs=()=>isBF()?`<div class="cslide bfs2" role="group" aria-roledescription="slide" aria-label="Black Friday"><div class="bfk"><small>MEGALOJA</small><h1>BLACK<br>FRIDAY</h1><div class="bfd">13 NOV – 29 NOV</div></div><div class="bfr"><div class="bfc"><b>FRETE GRÁTIS</b><span>Confira condições</span></div><div class="bfc o"><b>ATÉ 45% OFF</b><span>em itens selecionados</span></div><div class="bfc"><b>⏱ OFERTAS DE 24H</b><span>Favorite e seja avisado</span></div><button class="btn" onclick="goBF()">Ver Black Friday itens →</button></div></div>`:'';
+const carSlides=()=>[hs1(),bfs(),...CS.map(carSlide)].filter(Boolean);
+const carN=()=>1+(isBF()?1:0)+CS.length;
+const carousel=()=>`<div class="car" onmouseenter="CAR.pause=1" onmouseleave="CAR.pause=0" ontouchstart="CAR.pause=1" ontouchend="CAR.pause=0" role="region" aria-roledescription="carrossel" aria-label="Destaques e ofertas de Black Friday"><div class="ctrack" id="ctrack" style="transform:translateX(-${CAR.i*100}%)">${carSlides().join('')}</div><button class="cnav l" onclick="carGo(CAR.i-1,1)" aria-label="Anúncio anterior">‹</button><button class="cnav r" onclick="carGo(CAR.i+1,1)" aria-label="Próximo anúncio">›</button></div>`;
+const carDots=()=>`<div class="cdots" id="cdots">${Array.from({length:carN()},(_,i)=>`<button class="cdot ${i==CAR.i?'on':''}" onclick="carGo(${i},1)" aria-label="Ir para o anúncio ${i+1} de ${carN()}"></button>`).join('')}</div>`;
+function carGo(i,man){const N=carN();CAR.i=(i+N)%N;const t=$('ctrack');if(t)t.style.transform=`translateX(-${CAR.i*100}%)`;if(document.querySelectorAll)document.querySelectorAll('#cdots .cdot').forEach((d,j)=>d.classList.toggle('on',j==CAR.i));if(man)carLoop()}
+function carLoop(){clearTimeout(CAR.h);if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;CAR.h=setTimeout(()=>{if(S.sc=='home'&&!CAR.pause&&!document.hidden)carGo(CAR.i+1);carLoop()},5000)}
+(()=>{const clr=c=>['--ry','--rx','--tx','--ty'].forEach(k=>c.style.removeProperty(k));
+document.addEventListener('pointermove',e=>{const s=e.target.closest&&e.target.closest('.cslide');if(!s)return;const c=s.querySelector('.cim');if(!c)return;const r=s.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.setProperty('--ry',(-14+x*26)+'deg');c.style.setProperty('--rx',(3-y*18)+'deg');c.style.setProperty('--tx',(x*18)+'px');c.style.setProperty('--ty',(y*10)+'px')});
+document.addEventListener('pointerleave',e=>{const s=e.target.closest&&e.target.closest('.cslide');if(s){const c=s.querySelector('.cim');if(c)clr(c)}},true)})();
+carLoop();

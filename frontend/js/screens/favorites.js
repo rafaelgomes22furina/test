@@ -1,0 +1,2 @@
+const FAV=new Set();function fav(k){FAV.has(k)?FAV.delete(k):FAV.add(k);toast(FAV.has(k)?'♥ Adicionado aos favoritos':'Removido dos favoritos');draw()}
+function favsPg(){const L=ALL.filter(p=>FAV.has(p[0]));return `${hdr()}<div class="wrap"><h3 style="font-size:22px">♥ Favoritos</h3>${L.length?`<div class="grid">${L.map(card).join('')}</div>`:`<div class="card ok"><div class="ic">♡</div><h3>Você ainda não tem favoritos</h3><p class="mu">Toque no coração dos produtos para salvá-los aqui.</p><button class="btn" onclick="go('home')">Ver produtos</button></div>`}</div>`}

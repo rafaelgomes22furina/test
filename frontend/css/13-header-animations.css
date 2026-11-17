@@ -1,0 +1,33 @@
+/* ===== animações de hover/click: cabeçalho, "Entrar →" e botões sociais ===== */
+.hbi{position:relative;display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;overflow:hidden;user-select:none;transition:transform .18s cubic-bezier(.3,1.4,.5,1),background .18s,box-shadow .18s}
+.hbi:hover{transform:translateY(-2px) scale(1.07);background:rgba(127,127,127,.2);box-shadow:0 6px 16px rgba(0,0,0,.28)}
+.hbi:active{transform:scale(.92);box-shadow:none}
+.hbi .ic{font-style:normal;display:inline-block;transform-origin:50% 12%}
+.hbi:hover .bell{animation:bellw .7s ease-in-out}
+.hbi:hover .cart{animation:cartb .55s ease}
+.hbi:hover .heart{animation:heartb .6s ease;color:#ff4d6d}
+.hbi:hover .usr{animation:usrh .5s ease}
+@keyframes bellw{0%,100%{transform:rotate(0)}15%{transform:rotate(18deg)}35%{transform:rotate(-16deg)}55%{transform:rotate(10deg)}75%{transform:rotate(-6deg)}}
+@keyframes cartb{0%,100%{transform:translateX(0)}40%{transform:translateX(5px) rotate(-6deg)}70%{transform:translateX(-2px)}}
+@keyframes heartb{0%,100%{transform:scale(1)}30%{transform:scale(1.4)}60%{transform:scale(.92)}}
+@keyframes usrh{0%,100%{transform:translateY(0)}40%{transform:translateY(-4px)}}
+
+.acc{position:relative;overflow:hidden}
+.acc .go{display:inline-block;transition:transform .2s ease,letter-spacing .2s ease}
+.acc:hover{box-shadow:0 10px 24px rgba(0,0,0,.22),0 0 0 1px var(--g),0 0 18px rgba(0,230,118,.18)}
+.acc:hover .go{transform:translateX(6px)}
+.acc:hover .lga{animation:pop .45s ease}
+.acc:active{transform:scale(.97);box-shadow:none}
+.acc:active .go{transform:translateX(12px)}
+@keyframes pop{50%{transform:scale(1.18)}}
+
+.soc button{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;transition:transform .18s cubic-bezier(.3,1.4,.5,1),box-shadow .18s,border-color .18s,background .18s}
+.soc .sic{width:19px;height:19px;flex:none;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.soc button:hover{transform:translateY(-3px);border-color:var(--g);box-shadow:0 8px 20px rgba(0,0,0,.3),0 0 14px rgba(0,230,118,.18)}
+.soc button:hover .sic{transform:scale(1.22) rotate(-8deg)}
+.soc button:active{transform:scale(.94);box-shadow:none}
+.soc button:active .sic{transform:scale(.9)}
+
+.rip{position:absolute;border-radius:50%;pointer-events:none;background:rgba(0,230,118,.35);transform:scale(0);animation:rip .55s ease-out forwards}
+@keyframes rip{to{transform:scale(1);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hbi,.acc,.acc .go,.soc button,.soc .sic{transition:none}.hbi:hover .ic,.acc:hover .lga{animation:none}.rip{display:none}}

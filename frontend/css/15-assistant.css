@@ -1,0 +1,26 @@
+.agfab{position:fixed;right:calc(16px + var(--agr,0px));bottom:calc(16px + var(--agb,0px));width:76px;height:76px;border:0;background:transparent;cursor:pointer;z-index:9998;padding:0;filter:drop-shadow(0 0 14px rgba(43,212,208,.55));transition:transform .2s}
+.agfab:hover{transform:scale(1.08)}
+.agdot{position:absolute;right:8px;top:8px;width:12px;height:12px;border-radius:50%;background:#ffd23f;box-shadow:0 0 10px #ffd23f;animation:agp 1.6s infinite}
+@keyframes agp{50%{transform:scale(1.5);opacity:.5}}
+.agtip{position:fixed;right:calc(96px + var(--agr,0px));bottom:calc(34px + var(--agb,0px));background:#07191e;color:#d3fbf8;border:1px solid #2bd4d088;padding:8px 12px;border-radius:12px;font-size:13px;z-index:9998;box-shadow:0 0 16px #2bd4d055}
+.agpan{position:fixed;right:calc(16px + var(--agr,0px));bottom:calc(100px + var(--agb,0px));width:372px;max-height:min(600px,calc(var(--agvh,100vh) - 130px));display:none;flex-direction:column;background:linear-gradient(180deg,#051519f2,#010506f2);backdrop-filter:blur(10px);border:1px solid #2bd4d088;border-radius:18px;box-shadow:0 0 28px #2bd4d044,inset 0 0 40px #2bd4d014;z-index:9999;color:#e3fcfa;overflow:hidden;font-family:inherit}
+.agpan.on{display:flex}
+.agpan::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(43,212,208,.045) 3px 4px)}
+.agpan header{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid #2bd4d044}
+.agpan header canvas{flex:none}.agpan header b{letter-spacing:4px;color:#8ff3ee;font-size:16px}.agpan header small{display:block;color:#7fb3b6;font-size:11px}
+.agx{margin-left:auto;background:none;border:1px solid #2bd4d055;color:#a9f6f1;border-radius:8px;width:30px;height:30px;cursor:pointer;padding:0}
+.agmsgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px;min-height:170px}
+.agm{display:flex;flex-direction:column;gap:6px;max-width:90%}.agm.u{align-self:flex-end;align-items:flex-end}
+.agb{padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.4;color:#e3fcfa}
+.agm.a .agb{background:#0a2228;border:1px solid #2bd4d055}
+.agm.u .agb{background:linear-gradient(135deg,#13a3a3,#0a6b73);color:#fff}
+.aga{display:flex;flex-wrap:wrap;gap:6px}
+.aga button,.agchips button{background:#0c2a30;color:#d3fbf8;border:1px solid #2bd4d088;border-radius:999px;padding:6px 11px;font-size:12.5px;cursor:pointer}
+.aga button:hover,.agchips button:hover{background:#2bd4d0;color:#02161a;box-shadow:0 0 12px #2bd4d0}
+.agchips{display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;flex:none}.agchips button{white-space:nowrap}
+.agin{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #2bd4d044;margin:0}
+.agin input{flex:1;background:#020a0c;border:1px solid #2bd4d066;color:#effefd;border-radius:10px;padding:10px;font:inherit;font-size:14px;min-width:0;width:auto}
+.agin button{border:0;background:#2bd4d0;color:#02161a;border-radius:10px;width:42px;font-size:16px;cursor:pointer;padding:0}
+.agty i{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:#8ff3ee;animation:agp 1s infinite}.agty i:nth-child(2){animation-delay:.15s}.agty i:nth-child(3){animation-delay:.3s}
+@media(max-width:520px){.agpan{right:calc(10px + var(--agr,0px));left:calc(10px + var(--agl,0px));width:auto;bottom:calc(92px + var(--agb,0px))}.agtip{display:none}}
+@media (prefers-reduced-motion:reduce){.agdot,.agty i{animation:none}}

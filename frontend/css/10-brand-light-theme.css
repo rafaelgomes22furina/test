@@ -1,0 +1,43 @@
+/* ===== Identidade MegaLoja: petróleo na estrutura, turquesa na marca, sol na ação, laranja só em promoção ===== */
+body[data-theme=light] .btn:not(.s),body[data-theme=light] .sr b{background:var(--y);color:var(--yt)}
+body[data-theme=light] .btn:not(.s):hover,body[data-theme=light] .sr b:hover{background:#ffd34d}
+body[data-theme=light] .bfr .btn{background:#fff;color:#c23300}
+/* lateral e cabeçalho em petróleo */
+body[data-theme=light] .sb{background:linear-gradient(180deg,#0a3d47,#072d36);border-right:0}
+body[data-theme=light] .sb button{color:#bfdcdc}
+body[data-theme=light] .sb button:hover{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 3px 0 0 var(--y)}
+body[data-theme=light] .sb button.on,body[data-theme=light] .sb button.on:hover{background:var(--y);color:var(--yt);box-shadow:none}
+body[data-theme=light] .sb .logo{color:#fff}
+body[data-theme=light] .sb .lg{background:var(--y);color:var(--yt)}
+body[data-theme=light] .sb .us{color:#fff;border-top-color:rgba(255,255,255,.16)}
+body[data-theme=light] .sb .mu{color:#8fb7ba}
+body[data-theme=light] .sb .av{background:rgba(255,255,255,.12);color:var(--y)}
+body[data-theme=light] .hd{background:#0f6672;border-bottom:0;color:#e6f4f3}
+body[data-theme=light] .hd .tg.o{background:var(--y);color:var(--yt)}
+body[data-theme=light] .sub{background:var(--pn)}
+/* banners e blocos */
+body[data-theme=light] .mn,body[data-theme=light] .lgl,body[data-theme=light] .pm.g{background:linear-gradient(135deg,#0d7a80,#0a3d47);border-color:#0a3d47;color:#fff}
+body[data-theme=light] .mn *,body[data-theme=light] .lgl *,body[data-theme=light] .pm.g *{color:inherit}
+body[data-theme=light] .mn small,body[data-theme=light] .lgl small,body[data-theme=light] .pm.g small{color:var(--y)}
+body[data-theme=light] .car,body[data-theme=light] .mn.bn{background:#0a2a31}
+body[data-theme=light] .hs1{background:#0a2a31!important}.hs1{align-items:stretch!important}.hs1 .mn.bn{align-self:stretch}@media(min-width:821px){.hs1 .btx{padding:28px 40px 28px 68px}}.hs1 .bwrap:before{display:block;content:"";position:absolute;inset:-24px;background:var(--b) center/cover no-repeat;filter:blur(22px) saturate(1.1)}.hs1 .bwrap{container-type:size;display:flex;align-items:center;justify-content:center}.hs1 .bimg{width:min(100cqw,143.3cqh);height:auto;aspect-ratio:430/300;object-fit:cover;flex:none;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%),linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0,#000 15%,#000 85%,transparent 100%),linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-composite:intersect}
+body[data-theme=light] .cslide{background:radial-gradient(circle at 12% 25%,#ff7a00 0,#c23300 34%,#0a2a31 78%)}
+body[data-theme=light] .mn.bn{border-color:#0a3d47}
+body[data-theme=light] .bn:after{background:linear-gradient(90deg,#0a2a31 0%,rgba(10,42,49,.55) 22%,rgba(10,42,49,0) 55%)}
+body[data-theme=light] .spon,body[data-theme=light] .pm.o,body[data-theme=light] .sl.o{background:#fff3cc;border-color:#ecd27a}
+body[data-theme=light] .sl.o{color:#8a5a00}
+body[data-theme=light] .tg.a,body[data-theme=light] .tg.o,body[data-theme=light] .ic2,body[data-theme=light] .stp .c i{background:#ffefb8;color:#8a5a00}
+body[data-theme=light] .tg.r{background:#fde2e2}
+body[data-theme=light] .ben{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+body[data-theme=light] .ben b{color:var(--tx)}
+body[data-theme=light] .rcd .pz{color:var(--tx)}
+body[data-theme=light] .im,body[data-theme=light] .gal{background:#e6f0ee}
+body[data-theme=light] .pc:hover{box-shadow:0 8px 22px rgba(10,61,71,.16)}
+/* ===== Tiras de destaque nos títulos de seção ===== */
+body[data-theme=light] .sec:has(>a){align-items:center;background:var(--cd);border:1px solid var(--bd);border-left:5px solid var(--y);border-radius:12px;padding:10px 16px;margin:8px 0 14px}
+body[data-theme=light] .sec:has(>a) a{border:1px solid var(--g);border-radius:999px;padding:6px 14px;font-weight:600;font-size:13px;white-space:nowrap;transition:background .15s,color .15s}
+body[data-theme=light] .sec:has(>a) a:hover{background:var(--g);color:var(--og)}
+body[data-theme=light] .sec.secbf{background:linear-gradient(90deg,#ff4a12,#ff7a00);border:0;border-radius:12px;padding:14px 20px;box-shadow:0 6px 16px rgba(194,51,0,.25)}
+body[data-theme=light] .sec.secbf small{color:#ffe3bd}body[data-theme=light] .sec.secbf h2{color:#fff}
+body[data-theme=light] .sec.secbf a{background:#fff;color:#c23300;border-color:#fff}
+body[data-theme=light] .sec.secbf a:hover{background:#ffe9d6;color:#c23300}
